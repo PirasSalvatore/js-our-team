@@ -39,19 +39,37 @@ const teamMembers = [
 
 const teamsAlbumEl = document.querySelector('.teams_album')
 
-teamsAlbumEl.innerHTML = `
-  <div class="col p-0 m-0">
+popularAlbumTeamsMember(teamsAlbumEl, teamMembers)
+
+function popularAlbumTeamsMember(albumEl, teamMembers) {
+  for (let i = 0; i < teamMembers.length; i++) {
+    const member = teamMembers[i];
+
+    albumEl.innerHTML += generateCardMember(member)
+
+  }
+}
+
+function generateCardMember(obj) {
+  const { name, role, img, email } = obj
+
+  const card =
+    `
+  <div class="col">
       <div class="card bg-black text-white">
           <div class="row align-items-center">
-              <div class="col">
-                  <img src="./assets/${teamMembers[0].img}" alt="">
+              <div class="col-4">
+                  <img src="./assets/${img}" alt="">
               </div>
-              <div class="col p-2">
-                  <h5>${(teamMembers[0].name).toUpperCase()}</h5>
-                  <p>${teamMembers[0].role}</p>
-                  <a href="">${teamMembers[0].email}</a>
+              <div class="col-8 p-2 ">
+                  <h5 class="fw-bolder">${name.toUpperCase()}</h5>
+                  <p class="fs-6">${role}</p>
+                  <a class="fs-6 text-decoration-none" href="">${email}</a>
               </div>
           </div>
       </div>
   </div>
-  `;
+  `
+
+  return card
+}
