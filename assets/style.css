@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+img {
+    width: 100%
+}
+
 /* #endregion general rules */
 
 /* #region color palet*/

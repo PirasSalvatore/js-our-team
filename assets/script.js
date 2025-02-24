@@ -37,3 +37,21 @@ const teamMembers = [
   }
 ];
 
+const teamsAlbumEl = document.querySelector('.teams_album')
+
+teamsAlbumEl.innerHTML = `
+  <div class="col p-0 m-0">
+      <div class="card bg-black text-white">
+          <div class="row align-items-center">
+              <div class="col">
+                  <img src="./assets/${teamMembers[0].img}" alt="">
+              </div>
+              <div class="col p-2">
+                  <h5>${(teamMembers[0].name).toUpperCase()}</h5>
+                  <p>${teamMembers[0].role}</p>
+                  <a href="">${teamMembers[0].email}</a>
+              </div>
+          </div>
+      </div>
+  </div>
+  `;
