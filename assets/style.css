@@ -25,3 +25,17 @@ img {
 }
 
 /* #endregion class support*/
+
+.card_text {
+    padding-top: 0.75rem;
+}
+
+#name {
+    margin-bottom: 0.1rem;
+
+}
+
+#role {
+    font-size: 12px;
+    margin-bottom: 0.1rem;
+}

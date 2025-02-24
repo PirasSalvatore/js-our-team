@@ -59,12 +59,18 @@ function generateCardMember(obj) {
       <div class="card bg-black text-white">
           <div class="row align-items-center">
               <div class="col-4">
+                <div class="figure">
                   <img src="./assets/${img}" alt="">
+                </div>  
               </div>
-              <div class="col-8 p-2 ">
-                  <h5 class="fw-bolder">${name.toUpperCase()}</h5>
-                  <p class="fs-6">${role}</p>
-                  <a class="fs-6 text-decoration-none" href="">${email}</a>
+              <div class="col-8">
+                  <div class="card_text">
+                    <h5 class="fw-bold" id="name">${name.toUpperCase()}</h5>
+                    <p class="" id="role">${role}</p>
+                    <p>
+                    <a class="fs-6 text-decoration-none" id="email" href="#">${email}</a>
+                    </p>
+                  </div>
               </div>
           </div>
       </div>
