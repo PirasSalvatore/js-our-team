@@ -1,0 +1,23 @@
+/* #region general rules */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* #endregion general rules */
+
+/* #region color palet*/
+:root {
+    --js-tems-title: #e53170;
+}
+
+/* #endregion color palet*/
+
+/* #region class support*/
+.text-title {
+    color: var(--js-tems-title);
+}
+
+/* #endregion class support*/
